@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colour generator</title>
+  <link rel="stylesheet" href="color_g.css">
+</head>
+<body>
+  <section>
+    <div  class="Color-output">
+      <p id="ColorOutput"> Text</p>
+    </div>
+        <div class="form_wrap">
+            <form>
+              <div class="form-group">
+                <p>Red</p>
+                <input type="range" step="1" value="0" id="red" min="0" max="255" >
+                <!-- onchange="colorGenerator()" -->
+              </div>
+              <div class="form-group">
+                <p>Green</p>
+                <input type="range" name="" id="green" min="0" max="255">
+              </div>
+              <div class="form-group">
+                <p>Blue</p>
+                <input type="range" name="" id="blue" min="0" max="255">
+              </div> 
+            </form>
+            <div class="box_wrap">
+                <div class="box" id="colorCode">
+                </div>
+                <button id="copy_box_text"> Copy text</button>
+            </div>
+        </div>
+
+  </section>
+
+</body>
+</html>
