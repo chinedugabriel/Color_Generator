@@ -51,10 +51,28 @@ let btn_addColorToSection = document.getElementById("add-to-pallet");
 let view_color_added = document.getElementById("color-add-result-section");
 
 // function to toggle controls between RGB, HEX, HSL
-// function toggleNav(){
-//     if(set)
-// }
+function showRGB(){
+    setColorControl_RGB.style.display = "flex";
+    setColorControl_HEX.style.display = "none";
+    setColorControl_HSL.style.display = "none";
+}
+btn_RGB.addEventListener("click", showRGB);
 
+function showHSL(){
+    setColorControl_RGB.style.display = "none";
+    setColorControl_HEX.style.display = "none";
+    setColorControl_HSL.style.display = "flex";
+    
+}
+btn_HSL.addEventListener("click", showHSL);
+
+function showHEX(){
+    setColorControl_RGB.style.display = "none";
+    setColorControl_HEX.style.display = "flex";
+    // btn_HEX.style.backgroundColor = "blue";
+    setColorControl_HSL.style.display = "none";
+}
+btn_HEX.addEventListener("click", showHEX);
 
 // function colorGenerator(){  
       
@@ -64,5 +82,3 @@ let view_color_added = document.getElementById("color-add-result-section");
     
 //     ColorOutput.addEventListener("change", colorGenerator);
 
-
-console.log("setColorControl_RGB.nodeName")
