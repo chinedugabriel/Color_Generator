@@ -19,20 +19,20 @@
           <div class="display-wrapper">
             <div id="display-RGB">
               <div class="color-view-wrapper">
-                <div class="color-selection-view"></div>
+                <div class="color-selection-view" id="live-view-section"></div>
               </div>
               <!-- RGB control -->
               <div class="set-color-control-RGB" id="set-color-control-RGB">
                 <div class="color-red-sec">
-                  <p>Red <span id="view-red-value"></span></p>
+                  <p>Red <span id="view-red-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-red">
                 </div>
                 <div class="color-red-sec">
-                  <p>Green <span id="view-green-value"></span></p>
+                  <p>Green <span id="view-green-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-green">
                 </div>
                 <div class="color-blue-sec">
-                  <p>Blue <span id="view-blue-value"></span></p>
+                  <p>Blue <span id="view-blue-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-blue">
                 </div>
               </div>
@@ -40,34 +40,34 @@
               <!--HUE control  -->
               <div class="set-color-control-HSL" id="set-color-control-HSL">
                 <div class="color-red-sec">
-                  <p>HUE <span id="view-red-value"></span></p>
-                  <input type="range" min="0" max="255" id="set-red">
+                  <p>HUE <span id="view-red-value-hsl"></span></p>
+                  <input type="range" min="0" max="255" id="set-red-hsl">
                 </div>
                 <div class="color-green-sec">
-                  <p>SATURATION <span id="view-green-value"></span></p>
-                  <input type="range" min="0" max="255" id="set-green">
+                  <p>SATURATION <span id="view-green-value-hsl"></span></p>
+                  <input type="range" min="0" max="255" id="set-green-hsl">
                 </div>
                 <div class="color-blue-sec">
-                  <p>LIGHTNESS<span id="view-blue-value"></span></p>
-                  <input type="range" min="0" max="255" id="set-blue">
+                  <p>LIGHTNESS<span id="view-blue-value-hsl"></span></p>
+                  <input type="range" min="0" max="255" id="set-blue-hsl">
                 </div>
               </div>
               <!--End of HUE control  -->
               <!-- Hex control -->
               <div class="set-hex-color-control">
-                  <p>Chose your color here: <span id="view-hex-range-value"></span></p>
+                  <p>Chose your color here: <span id="view-hex-range-value-hex"></span></p>
                   <input type="color" id="set-hex">
               </div>
               <!--end of HEX control  -->
               <div class="opacity-section">
                 <p>Opacity : <span id="view-opacity-value"></span></p>
-                <input type="range" name="" id="">
+                <input type="range"  id="opacity">
               </div>
               <div class="color-code-section">
-                <div id="color-code-value">#ff6347</div>
+                <div id="color-code-value">#######</div>
                 <button id="add-to-pallet">Add</button>
               </div>
-              <div class="color-field-section">
+              <div class="color-field-section" id="color-add-result-section">
                 <div class="color-field">
                   <div class="color-view"></div>
                   <p id="color-code-value">rgb(255,99,71)</p>

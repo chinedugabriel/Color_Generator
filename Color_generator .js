@@ -1,22 +1,57 @@
+// Button veriable
+let btn_RGB = document.getElementById("RGB");
+let btn_HEX = document.getElementById("HEX");
+let btn_HSL = document.getElementById("HSL");
 
-//     let colorOutput = document.getElementById("ColorOutput");
-//     let redRange = document.getElementById("red").value;
-//     let greenRange = document.getElementById("green");
-//     let blueRange = document.getElementById("blue");
+// live-view-section where the user see's the color
+let live_view_section = document.getElementById("live-view-section");
+
+// input Rang & live value preview section for RGB
+let view_inputRedRgb = document.getElementById("view-red-value-rgb");
+let inputRedRgb = document.getElementById("set-red");
+
+let view_inputGreenRgb = document.getElementById("view-green-value-rgb");
+let inputGreenRgb = document.getElementById("set-green");
+
+let viewBlueRgb = document.getElementById("view-blue-value-rgb");
+let inputBlueRgb = document.getElementById("set-blue");
 
 
-// function colorGenerator(){  
+// input Rang section for HSL
+let view_inputRedHsl = document.getElementById("view-red-value-hsl");
+let inputRedHsl = document.getElementById("set-red-hsl");
+
+let view_inputGreenHsl = document.getElementById("view-green-value-hsl");
+let inputGreenHsl = document.getElementById("set-green-hsl");
+
+let viewBlueHsl = document.getElementById("view-blue-value-hsl");
+let inputBlueHsl = document.getElementById("set-blue-hsl");
+
+
+// input Rang section for HEX
+let view_inputRedHex = document.getElementById("view-red-value-hex");
+let inputRedHex = document.getElementById("set-hex");
+
+// opacity control
+let view_opacityControl = document.getElementById("view-opacity-value");
+let opacityControl = document.getElementById("opacity");
+
+// view general color code 
+let view_generalColorCode = document.getElementById("color-code-value");
+
+// add color to pallet section
+let btn_addColorToSection = document.getElementById("add-to-pallet");
+
+// color pallet section added for later
+
+
+
+function colorGenerator(){  
       
-//       colorOutput.innHTML = redRange;
-//       // alert (redRange.input);
-//     }
+      colorOutput.innHTML = redRange;
+      // alert (redRange.input);
+    }
     
-//     ColorOutput.addEventListener("input", colorGenerator);
+    ColorOutput.addEventListener("input", colorGenerator);
 
 
-/*
-
-
-
-
-*/ 
