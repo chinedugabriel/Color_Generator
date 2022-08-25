@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Colour generator</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color generator</title>
   <link rel="stylesheet" href="color_g.css">
 </head>
 <body>
@@ -20,12 +22,12 @@
                 <div class="color-selection-view"></div>
               </div>
               <!-- RGB control -->
-              <div class="set-color-control-RGB">
+              <div class="set-color-control-RGB" id="set-color-control-RGB">
                 <div class="color-red-sec">
                   <p>Red <span id="view-red-value"></span></p>
                   <input type="range" min="0" max="255" id="set-red">
                 </div>
-                <div class="color-green-sec">
+                <div class="color-red-sec">
                   <p>Green <span id="view-green-value"></span></p>
                   <input type="range" min="0" max="255" id="set-green">
                 </div>
@@ -36,7 +38,7 @@
               </div>
               <!--End of RGB control  -->
               <!--HUE control  -->
-              <div class="set-color-control-RGB">
+              <div class="set-color-control-HSL" id="set-color-control-HSL">
                 <div class="color-red-sec">
                   <p>HUE <span id="view-red-value"></span></p>
                   <input type="range" min="0" max="255" id="set-red">
@@ -53,7 +55,7 @@
               <!--End of HUE control  -->
               <!-- Hex control -->
               <div class="set-hex-color-control">
-                  <p>color : <span id="view-hex-range-value"></span></p>
+                  <p>Chose your color here: <span id="view-hex-range-value"></span></p>
                   <input type="color" id="set-hex">
               </div>
               <!--end of HEX control  -->
@@ -66,6 +68,10 @@
                 <button id="add-to-pallet">Add</button>
               </div>
               <div class="color-field-section">
+                <div class="color-field">
+                  <div class="color-view"></div>
+                  <p id="color-code-value">rgb(255,99,71)</p>
+                </div>
                 <div class="color-field">
                   <div class="color-view"></div>
                   <p id="color-code-value">rgb(255,99,71)</p>

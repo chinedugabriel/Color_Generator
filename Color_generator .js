@@ -14,3 +14,9 @@
 //     ColorOutput.addEventListener("input", colorGenerator);
 
 
+/*
+
+
+
+
+*/ 
