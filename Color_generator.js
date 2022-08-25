@@ -7,6 +7,8 @@ let btn_HSL = document.getElementById("HSL");
 let live_view_section = document.getElementById("live-view-section");
 
 // input Rang & live value preview section for RGB
+let setColorControl_RGB = document.getElementById("set-color-control-RGB");
+
 let view_inputRedRgb = document.getElementById("view-red-value-rgb");
 let inputRedRgb = document.getElementById("set-red");
 
@@ -18,6 +20,8 @@ let inputBlueRgb = document.getElementById("set-blue");
 
 
 // input Rang section for HSL
+let setColorControl_HSL = document.getElementById("set-color-control-HSL");
+
 let view_inputRedHsl = document.getElementById("view-red-value-hsl");
 let inputRedHsl = document.getElementById("set-red-hsl");
 
@@ -29,6 +33,7 @@ let inputBlueHsl = document.getElementById("set-blue-hsl");
 
 
 // input Rang section for HEX
+let setColorControl_HEX = document.getElementById("set-color-control-HEX");
 let view_inputRedHex = document.getElementById("view-red-value-hex");
 let inputRedHex = document.getElementById("set-hex");
 
@@ -43,15 +48,21 @@ let view_generalColorCode = document.getElementById("color-code-value");
 let btn_addColorToSection = document.getElementById("add-to-pallet");
 
 // color pallet section added for later
+let view_color_added = document.getElementById("color-add-result-section");
+
+// function to toggle controls between RGB, HEX, HSL
+// function toggleNav(){
+//     if(set)
+// }
 
 
-
-function colorGenerator(){  
+// function colorGenerator(){  
       
-      colorOutput.innHTML = redRange;
-      // alert (redRange.input);
-    }
+//       colorOutput.innHTML = redRange;
+//       // alert (redRange.input);
+//     }
     
-    ColorOutput.addEventListener("input", colorGenerator);
+//     ColorOutput.addEventListener("change", colorGenerator);
 
 
+console.log("setColorControl_RGB.nodeName")
