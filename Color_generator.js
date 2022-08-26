@@ -97,6 +97,7 @@ inputGreenRgb.addEventListener("change", RGB_liveView);
 inputBlueRgb.addEventListener("change", RGB_liveView);
 opacityControl.addEventListener("change", RGB_liveView);
 
+// function to chose color controls between RGB, HEX, HSL
 function showHSL(){
     setColorControl_RGB.style.display = "none";
     setColorControl_HEX.style.display = "none";
@@ -134,7 +135,7 @@ inputGreenHsl.addEventListener("change", HSL_liveView);
 inputBlueHsl.addEventListener("change", HSL_liveView);
 opacityControl.addEventListener("change", HSL_liveView);
 
-
+// function to chose color controls between RGB, HEX, HSL
 function showHEX(){
     setColorControl_RGB.style.display = "none";
     setColorControl_HEX.style.display = "flex";
@@ -150,7 +151,7 @@ function showHEX(){
 }
 btn_HEX.addEventListener("click", showHEX);
 
-// 
+// live view function to see the color that's been selected
 function HEX_liveView(){
     view_generalColorCode.innerHTML = `${inputRedHex.value}`;
     live_view_section.style.backgroundColor = `${inputRedHex.value}`;
@@ -165,12 +166,10 @@ inputRedHex.addEventListener("change", HEX_liveView);
 
     // function for adding the desired color to the pallet
 
-    function addToPallet(){
+function addToPallet(){
         
-        let rst = "";
-        
-        
-
+    let rst = "";
+        // this conditional statement helps to check the current color control that is been used and gets the return value  
         if(setColorControl_RGB.style.display == "flex"){
             rst = [`${RGB_liveView()}`];
         }else if(setColorControl_HSL.style.display == "flex"){
@@ -181,10 +180,10 @@ inputRedHex.addEventListener("change", HEX_liveView);
             rst = [`${HEX_liveView()}`];
         }
 
-
+        // this helps in adding the added colors showing them at the bottom, whit a conditional statement to limit it to 4 colors
         let result = "";
         rst.forEach((val)=>{
-            // result += val;
+            // 
             if(view_color_added.getElementsByTagName("div").length == 8){
                 alert("you have reached the limit");
             }else{
@@ -193,8 +192,6 @@ inputRedHex.addEventListener("change", HEX_liveView);
                 <div style="background-color:${val}" class="color-view"></div>
                 <p >${val}</p>
                 </div>`;
-                
-                // document.getElementById("rstBG").style.backgroundColor = `${val}`;
             }
     
         view_color_added.innerHTML += result;
