@@ -51,6 +51,8 @@ let btn_addColorToSection = document.getElementById("add-to-pallet");
 // color pallet section added for later
 let view_color_added = document.getElementById("color-add-result-section");
 
+
+
 // function to chose color controls between RGB, HEX, HSL
 btn_RGB.style.backgroundColor = "#005cc8";
 btn_RGB.style.color = "white";
@@ -75,14 +77,18 @@ btn_RGB.addEventListener("click", showRGB);
 
 // live view function to see the color that's been selected
 function RGB_liveView(){
-    view_inputRedRgb.innerHTML = inputRedRgb.value;
-    view_inputGreenRgb.innerHTML = inputGreenRgb.value;
-    view_opacityControl.innerHTML = opacityControl.value ;
-    view_BlueRgb.innerHTML = inputBlueRgb.value;
-    live_view_section.style.backgroundColor = `rgba(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value}, ${opacityControl.value/100})`;
-
-    view_generalColorCode.innerHTML = `rgb(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value})`;
+    if(setColorControl_RGB.style.display == "flex"){
+        view_inputRedRgb.innerHTML = inputRedRgb.value;
+        view_inputGreenRgb.innerHTML = inputGreenRgb.value;
+        view_opacityControl.innerHTML = opacityControl.value ;
+        view_BlueRgb.innerHTML = inputBlueRgb.value;
+        live_view_section.style.backgroundColor = `rgba(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value}, ${opacityControl.value/100})`;
+    
+        view_generalColorCode.innerHTML = `rgb(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value})`;
+    }
 }
+showRGB();
+
 inputRedRgb.addEventListener("change", RGB_liveView);
 inputGreenRgb.addEventListener("change", RGB_liveView);
 inputBlueRgb.addEventListener("change", RGB_liveView);
@@ -106,13 +112,15 @@ btn_HSL.addEventListener("click", showHSL);
 
 // live view function to see the color that's been selected
 function HSL_liveView(){
-    view_inputRedHsl.innerHTML = inputRedHsl.value;
-    view_inputGreenHsl.innerHTML = inputGreenHsl.value;
-    view_opacityControl.innerHTML = opacityControl.value ;
-    view_BlueHsl.innerHTML = inputBlueHsl.value;
-    live_view_section.style.backgroundColor = `rgba(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
-
-    view_generalColorCode.innerHTML = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value})`;
+    if(setColorControl_HSL.style.display == "flex"){
+        view_inputRedHsl.innerHTML = inputRedHsl.value;
+        view_inputGreenHsl.innerHTML = inputGreenHsl.value;
+        view_opacityControl.innerHTML = opacityControl.value ;
+        view_BlueHsl.innerHTML = inputBlueHsl.value;
+        live_view_section.style.backgroundColor = `rgba(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
+    
+        view_generalColorCode.innerHTML = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value})`;
+    }
 
 }
 inputRedHsl.addEventListener("change", HSL_liveView);
@@ -144,4 +152,3 @@ function HEX_liveView(){
 inputRedHex.addEventListener("change", HEX_liveView);
 
 
-// write a conditional to check if RGB is active or HSL or Hex which the opacity would use to call the function
