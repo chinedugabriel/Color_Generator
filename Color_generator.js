@@ -186,7 +186,7 @@ inputRedHex.addEventListener("change", HEX_liveView);
         rst.forEach((val)=>{
             // result += val;
             if(view_color_added.getElementsByTagName("div").length == 8){
-                console.log("you have reached the limit");
+                alert("you have reached the limit");
             }else{
                 result = `                
                 <div class="color-field">
