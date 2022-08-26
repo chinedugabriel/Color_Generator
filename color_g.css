@@ -234,12 +234,16 @@ display: flex;
 flex-flow:column nowrap;
 justify-content: space-around;
 align-items: center;
+
 }
 div.color-field-section>div.color-field>.color-view{
 /* border: 2px solid #ff00d4; */
 height: 6em;
 width: 6em;
 background-color: white;
+}
+div.color-field-section>div.color-field>p{
+  font-size: 12px;
 }
 /* div.color-field-section ends here */
 
@@ -484,8 +488,8 @@ section{
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  }
-  div.color-field-section>div.color-field{
+}
+div.color-field-section>div.color-field{
   /* border: 2px solid #ff00d4; */
   background-color: dimgrey;
   color: white;
@@ -495,6 +499,7 @@ section{
   flex-flow:column nowrap;
   justify-content: space-around;
   align-items: center;
+
   }
   div.color-field-section>div.color-field>.color-view{
   /* border: 2px solid #ff00d4; */

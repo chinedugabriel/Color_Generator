@@ -85,6 +85,9 @@ function RGB_liveView(){
         live_view_section.style.backgroundColor = `rgba(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value}, ${opacityControl.value/100})`;
     
         view_generalColorCode.innerHTML = `rgb(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value})`;
+
+        let codeValue = "";
+        return codeValue = `rgb(${inputRedRgb.value}, ${inputGreenRgb.value}, ${inputBlueRgb.value}, ${opacityControl.value/100})`;
     }
 }
 showRGB();
@@ -120,6 +123,9 @@ function HSL_liveView(){
         live_view_section.style.backgroundColor = `rgba(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
     
         view_generalColorCode.innerHTML = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value})`;
+
+        let codeValue = "";
+        return codeValue = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
     }
 
 }
@@ -148,7 +154,51 @@ btn_HEX.addEventListener("click", showHEX);
 function HEX_liveView(){
     view_generalColorCode.innerHTML = `${inputRedHex.value}`;
     live_view_section.style.backgroundColor = `${inputRedHex.value}`;
+
+    let codeValue = "";
+    return codeValue = inputRedHex.value;
+
 }
 inputRedHex.addEventListener("change", HEX_liveView);
 
 
+
+    // function for adding the desired color to the pallet
+
+    function addToPallet(){
+        
+        let rst = "";
+        
+        
+
+        if(setColorControl_RGB.style.display == "flex"){
+            rst = [`${RGB_liveView()}`];
+        }else if(setColorControl_HSL.style.display == "flex"){
+            rst = [`${HSL_liveView()}`];
+            
+        }else{
+            
+            rst = [`${HEX_liveView()}`];
+        }
+
+
+        let result = "";
+        rst.forEach((val)=>{
+            // result += val;
+            if(view_color_added.getElementsByTagName("div").length == 8){
+                console.log("you have reached the limit");
+            }else{
+                result = `                
+                <div class="color-field">
+                <div style="background-color:${val}" class="color-view"></div>
+                <p >${val}</p>
+                </div>`;
+                
+                // document.getElementById("rstBG").style.backgroundColor = `${val}`;
+            }
+    
+        view_color_added.innerHTML += result;
+        })
+    };
+    
+    btn_addColorToSection.addEventListener("click", addToPallet);
