@@ -139,7 +139,7 @@ btn_HEX.addEventListener("click", showHEX);
 // 
 function HEX_liveView(){
     view_generalColorCode.innerHTML = `${inputRedHex.value}`;
-    live_view_section.style.backgroundColor =  `#${view_generalColorCode.innerHTML}`;
+    live_view_section.style.backgroundColor = `${inputRedHex.value}`;
 }
 inputRedHex.addEventListener("change", HEX_liveView);
 
