@@ -121,12 +121,12 @@ function HSL_liveView(){
         view_inputGreenHsl.innerHTML = inputGreenHsl.value;
         view_opacityControl.innerHTML = opacityControl.value ;
         view_BlueHsl.innerHTML = inputBlueHsl.value;
-        live_view_section.style.backgroundColor = `rgba(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
+        live_view_section.style.backgroundColor = `hsla(${inputRedHsl.value}, ${inputGreenHsl.value}%, ${inputBlueHsl.value}%, ${opacityControl.value/100})`;
     
-        view_generalColorCode.innerHTML = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value})`;
+        view_generalColorCode.innerHTML = `hsla(${inputRedHsl.value}, ${inputGreenHsl.value}%, ${inputBlueHsl.value}%, ${opacityControl.value/100})`;
 
         let codeValue = "";
-        return codeValue = `hsl(${inputRedHsl.value}, ${inputGreenHsl.value}, ${inputBlueHsl.value}, ${opacityControl.value/100})`;
+        return codeValue = `hsla(${inputRedHsl.value}, ${inputGreenHsl.value}%, ${inputBlueHsl.value}%, ${opacityControl.value/100})`;
     }
 
 }
