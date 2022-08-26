@@ -24,15 +24,15 @@
               <!-- RGB control -->
               <div class="set-color-control-RGB" id="set-color-control-RGB">
                 <div class="color-red-sec">
-                  <p>Red <span id="view-red-value-rgb"></span></p>
+                  <p>Red : <span id="view-red-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-red">
                 </div>
                 <div class="color-red-sec">
-                  <p>Green <span id="view-green-value-rgb"></span></p>
+                  <p>Green : <span id="view-green-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-green">
                 </div>
                 <div class="color-blue-sec">
-                  <p>Blue <span id="view-blue-value-rgb"></span></p>
+                  <p>Blue : <span id="view-blue-value-rgb"></span></p>
                   <input type="range" min="0" max="255" id="set-blue">
                 </div>
               </div>
@@ -40,15 +40,15 @@
               <!--HUE control  -->
               <div class="set-color-control-HSL" id="set-color-control-HSL">
                 <div class="color-red-sec">
-                  <p>HUE <span id="view-red-value-hsl"></span></p>
+                  <p>HUE : <span id="view-red-value-hsl"></span></p>
                   <input type="range" min="0" max="255" id="set-red-hsl">
                 </div>
                 <div class="color-green-sec">
-                  <p>SATURATION <span id="view-green-value-hsl"></span></p>
+                  <p>SATURATION : <span id="view-green-value-hsl"></span></p>
                   <input type="range" min="0" max="255" id="set-green-hsl">
                 </div>
                 <div class="color-blue-sec">
-                  <p>LIGHTNESS<span id="view-blue-value-hsl"></span></p>
+                  <p>LIGHTNESS : <span id="view-blue-value-hsl"></span></p>
                   <input type="range" min="0" max="255" id="set-blue-hsl">
                 </div>
               </div>
@@ -61,10 +61,10 @@
               <!--end of HEX control  -->
               <div class="opacity-section">
                 <p>Opacity : <span id="view-opacity-value"></span></p>
-                <input type="range"  id="opacity">
+                <input type="range" value="100" id="opacity" min="0" max="100" >
               </div>
               <div class="color-code-section">
-                <div id="color-code-value">#######</div>
+                <div id="color-code-value"><p id="color-code-value-p"></p></div>
                 <button id="add-to-pallet">Add</button>
               </div>
               <div class="color-field-section" id="color-add-result-section">
