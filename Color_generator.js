@@ -92,10 +92,10 @@ function RGB_liveView(){
 }
 showRGB();
 
-inputRedRgb.addEventListener("change", RGB_liveView);
-inputGreenRgb.addEventListener("change", RGB_liveView);
-inputBlueRgb.addEventListener("change", RGB_liveView);
-opacityControl.addEventListener("change", RGB_liveView);
+inputRedRgb.addEventListener("input", RGB_liveView);
+inputGreenRgb.addEventListener("input", RGB_liveView);
+inputBlueRgb.addEventListener("input", RGB_liveView);
+opacityControl.addEventListener("input", RGB_liveView);
 
 // function to chose color controls between RGB, HEX, HSL
 function showHSL(){
@@ -130,10 +130,10 @@ function HSL_liveView(){
     }
 
 }
-inputRedHsl.addEventListener("change", HSL_liveView);
-inputGreenHsl.addEventListener("change", HSL_liveView);
-inputBlueHsl.addEventListener("change", HSL_liveView);
-opacityControl.addEventListener("change", HSL_liveView);
+inputRedHsl.addEventListener("input", HSL_liveView);
+inputGreenHsl.addEventListener("input", HSL_liveView);
+inputBlueHsl.addEventListener("input", HSL_liveView);
+opacityControl.addEventListener("input", HSL_liveView);
 
 // function to chose color controls between RGB, HEX, HSL
 function showHEX(){
@@ -160,7 +160,7 @@ function HEX_liveView(){
     return codeValue = inputRedHex.value;
 
 }
-inputRedHex.addEventListener("change", HEX_liveView);
+inputRedHex.addEventListener("input", HEX_liveView);
 
 
 
